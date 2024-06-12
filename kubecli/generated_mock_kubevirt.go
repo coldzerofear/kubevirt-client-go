@@ -60,7 +60,6 @@ import (
 	v117 "k8s.io/client-go/kubernetes/typed/rbac/v1"
 	v1alpha15 "k8s.io/client-go/kubernetes/typed/rbac/v1alpha1"
 	v1beta113 "k8s.io/client-go/kubernetes/typed/rbac/v1beta1"
-	v1alpha16 "k8s.io/client-go/kubernetes/typed/resource/v1alpha1"
 	v118 "k8s.io/client-go/kubernetes/typed/scheduling/v1"
 	v1alpha17 "k8s.io/client-go/kubernetes/typed/scheduling/v1alpha1"
 	v1beta114 "k8s.io/client-go/kubernetes/typed/scheduling/v1beta1"
@@ -873,16 +872,6 @@ func (_m *MockKubevirtClient) RbacV1alpha1() v1alpha15.RbacV1alpha1Interface {
 
 func (_mr *_MockKubevirtClientRecorder) RbacV1alpha1() *gomock.Call {
 	return _mr.mock.ctrl.RecordCall(_mr.mock, "RbacV1alpha1")
-}
-
-func (_m *MockKubevirtClient) ResourceV1alpha1() v1alpha16.ResourceV1alpha1Interface {
-	ret := _m.ctrl.Call(_m, "ResourceV1alpha1")
-	ret0, _ := ret[0].(v1alpha16.ResourceV1alpha1Interface)
-	return ret0
-}
-
-func (_mr *_MockKubevirtClientRecorder) ResourceV1alpha1() *gomock.Call {
-	return _mr.mock.ctrl.RecordCall(_mr.mock, "ResourceV1alpha1")
 }
 
 func (_m *MockKubevirtClient) SchedulingV1alpha1() v1alpha17.SchedulingV1alpha1Interface {
